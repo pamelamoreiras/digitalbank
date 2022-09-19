@@ -6,8 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Data
@@ -18,11 +16,11 @@ import javax.persistence.Id;
 public class AddressData {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private String id;
     private String street;
     private String district;
     private String city;
     private Integer number;
-    private String complement;
+    private String complementAddress;
+    private String zipCode;
 }

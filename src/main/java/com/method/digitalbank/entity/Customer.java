@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.util.UUID;
 
 @Data
 @AllArgsConstructor
@@ -13,9 +14,10 @@ import java.time.LocalDate;
 @Builder
 public class Customer {
 
+    private UUID id;
     private String name;
     private String email;
-    private String cpf;
+    private String documentNumber;
     private Address address;
     private LocalDate birthdate;
     private Double income;

@@ -1,13 +1,16 @@
 package com.method.digitalbank.interfacesadapters.database.domain;
 
-import com.method.digitalbank.entity.AccountStatus;
-import com.method.digitalbank.entity.AccountType;
+import com.method.digitalbank.entity.enums.AccountStatus;
+import com.method.digitalbank.entity.enums.AccountType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 
 @Data
 @AllArgsConstructor
@@ -17,13 +20,12 @@ import javax.persistence.*;
 public class AccountData {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private String id;
     private AccountType type;
     private Integer branch;
     private Integer account;
     private AccountStatus status;
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "customer_id")
     private CustomerData customerData;
 }
