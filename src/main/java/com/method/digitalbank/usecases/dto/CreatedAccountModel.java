@@ -1,4 +1,4 @@
-package com.method.digitalbank.entity;
+package com.method.digitalbank.usecases.dto;
 
 import com.method.digitalbank.entity.enums.AccountStatus;
 import com.method.digitalbank.entity.enums.AccountType;
@@ -13,7 +13,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Account {
+public class CreatedAccountModel {
 
     private UUID id;
     private AccountType type;

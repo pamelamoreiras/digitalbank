@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Data
 @AllArgsConstructor
@@ -23,4 +24,7 @@ public class AddressData {
     private Integer number;
     private String complementAddress;
     private String zipCode;
+
+    @OneToOne
+    private CustomerData customerData;
 }

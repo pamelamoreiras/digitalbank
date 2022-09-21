@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
-import java.time.LocalDate;
 
 @Data
 @AllArgsConstructor
@@ -22,10 +21,12 @@ public class CustomerData {
     private String name;
     private String email;
     private String documentNumber;
+
     @OneToOne
-    private AddressData address;
-    private LocalDate birthdate;
+    private AddressData addressData;
+    private Integer birthdate;
     private Double income;
+
     @OneToOne
     private AccountData accountData;
 }

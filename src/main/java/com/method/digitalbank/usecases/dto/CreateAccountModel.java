@@ -1,5 +1,6 @@
-package com.method.digitalbank.entity;
+package com.method.digitalbank.usecases.dto;
 
+import com.method.digitalbank.entity.Address;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,7 +12,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Customer {
+public class CreateAccountModel {
 
     private UUID id;
     private String name;
