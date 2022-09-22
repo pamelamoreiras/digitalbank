@@ -1,4 +1,4 @@
-package com.method.digitalbank.interfacesadapters.database.domain;
+package com.method.digitalbank.interfacesadapters.gateway.database.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import java.time.LocalDate;
 

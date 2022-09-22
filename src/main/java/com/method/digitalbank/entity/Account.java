@@ -18,6 +18,6 @@ public class Account {
     private UUID id;
     private AccountType type;
     private Integer branch;
-    private Integer account;
+    private Integer accountNumber;
     private AccountStatus status;
 }
