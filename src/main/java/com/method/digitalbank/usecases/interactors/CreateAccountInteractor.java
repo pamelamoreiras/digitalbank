@@ -27,7 +27,7 @@ public class CreateAccountInteractor implements CreateAccountInputPort {
 
         var account = Account.builder().build();
 
-        if (model.getBirthdate() > 16 && model.getIncome() > 500 && accountProvider.findAccountByDocumentNumber(model.getDocumentNumber())) {
+        if (model.getBirthdate() > 16 && model.getIncome() > 500 ) {
             account = Account.builder()
                     .id(UUID.randomUUID())
                     .accountNumber(123)
