@@ -1,6 +1,6 @@
 package com.method.digitalbank.interfacesadapters.database.providers;
 
-import com.method.digitalbank.entity.Account;
+import com.method.digitalbank.entitydomain.Account;
 import com.method.digitalbank.interfacesadapters.database.mappers.ConverterOfAccount;
 import com.method.digitalbank.interfacesadapters.database.repository.AccountRepository;
 import com.method.digitalbank.interfacesadapters.database.repository.CustomerRepository;

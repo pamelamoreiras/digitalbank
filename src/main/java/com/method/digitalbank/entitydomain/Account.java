@@ -1,7 +1,7 @@
-package com.method.digitalbank.entity;
+package com.method.digitalbank.entitydomain;
 
-import com.method.digitalbank.entity.enums.AccountStatus;
-import com.method.digitalbank.entity.enums.AccountType;
+import com.method.digitalbank.entitydomain.enums.AccountStatus;
+import com.method.digitalbank.entitydomain.enums.AccountType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,6 +16,7 @@ import java.util.UUID;
 public class Account {
 
     private UUID id;
+    private Customer customer;
     private AccountType type;
     private Integer branch;
     private Integer accountNumber;

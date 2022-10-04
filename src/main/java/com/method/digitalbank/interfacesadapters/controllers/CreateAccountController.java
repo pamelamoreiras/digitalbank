@@ -1,7 +1,8 @@
 package com.method.digitalbank.interfacesadapters.controllers;
 
-import com.method.digitalbank.usecases.dto.CreateAccountModel;
-import com.method.digitalbank.usecases.dto.CreatedAccountModel;
+import com.method.digitalbank.interfacesadapters.controllers.request.CreateAccountRequest;
+import com.method.digitalbank.interfacesadapters.controllers.response.CreateAccountResponse;
+import com.method.digitalbank.interfacesadapters.database.mappers.ConverterOfAccount;
 import com.method.digitalbank.usecases.interactors.CreateAccountInteractor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,8 +18,12 @@ public class CreateAccountController {
     private final CreateAccountInteractor interactor;
 
     @PostMapping
-    public CreatedAccountModel execute(@RequestBody final CreateAccountModel model){
+    public CreateAccountResponse execute(@RequestBody final CreateAccountRequest request){
 
-        return interactor.execute(model);
+        final var paraConverter = ConverterOfAccount.converterCreateRequestToCreateModel(request);
+
+        final var paraRetornar = interactor.execute(paraConverter);
+
+        return ConverterOfAccount.converterCreatedModelToCreateResponse(paraRetornar);
     }
 }

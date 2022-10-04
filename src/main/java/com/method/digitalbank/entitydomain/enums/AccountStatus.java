@@ -1,4 +1,4 @@
-package com.method.digitalbank.entity.enums;
+package com.method.digitalbank.entitydomain.enums;
 
 public enum AccountStatus {
 

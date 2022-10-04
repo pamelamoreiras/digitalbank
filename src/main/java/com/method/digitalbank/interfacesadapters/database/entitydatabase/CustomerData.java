@@ -1,15 +1,15 @@
-package com.method.digitalbank.interfacesadapters.database.domain;
+package com.method.digitalbank.interfacesadapters.database.entitydatabase;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 
-@Data
+@Getter @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
@@ -21,12 +21,6 @@ public class CustomerData {
     private String name;
     private String email;
     private String documentNumber;
-
-    @OneToOne
-    private AddressData addressData;
-    private Integer birthdate;
-    private Double income;
-
-    @OneToOne
-    private AccountData accountData;
+    private String phoneNumber;
+    private String password;
 }

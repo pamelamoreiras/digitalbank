@@ -1,6 +1,6 @@
 package com.method.digitalbank.interfacesadapters.database.repository;
 
-import com.method.digitalbank.interfacesadapters.database.domain.AccountData;
+import com.method.digitalbank.interfacesadapters.database.entitydatabase.AccountData;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
